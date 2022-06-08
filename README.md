@@ -8,6 +8,8 @@ BizCompliancer/BizCompliancer is a ✨ special ✨ repository because its `READM
 You can click the Preview link to take a look at your changes.
 --->
 
+### Pexpect
+
                                                   '''Pexpect'''
 Pexpect is a python module for swappimg child appllications and controlling them automatically. Pexpect can also be used for automating interactive applications such as ssh , ftp , passwd , telnet ect.
 Pexpect  can also be used for automated software automate setup scripts for duplicating software package installations on divverent servers . It can also be used for automated software testing.
