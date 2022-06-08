@@ -1,0 +1,59 @@
+{
+  "Nodes": [
+    {
+      "Name": "/start",
+      "Message": "Let me know when you are ready to start..",
+      "Options": [
+        {"option_text": "Let's start", "next_vertex_label":  "/start-1"}
+      ],
+      "Action": ""
+    },
+    {
+      "Name": "/start-1",
+      "Message": "What is your Gender?",
+      "Options": [
+        {"option_text": "Male", "next_vertex_label":  "male_height-2"},
+        {"option_text": "Female", "next_vertex_label":  "female_height-2"}
+      ],
+      "Action": ""
+    },
+    {
+      "Name": "male_height-2",
+      "Message": "What is your Height in cm? Type like 'Height 178'",
+      "Options": [
+        {"option_text": "", "next_vertex_label":  "weight-3"}
+      ],
+      "Action": "Height"
+    },
+    {
+      "Name": "female_height-2",
+      "Message": "What is your Height in cm? Type like 'Height 178'",
+      "Options": [
+        {"option_text": "", "next_vertex_label":  "weight-3"}
+      ],
+      "Action": "Height"
+    },
+    {
+      "Name": "weight-3",
+      "Message": "What is your Weight in Kg? Type like 'Weight 78'",
+      "Options": [
+        {"option_text": "", "next_vertex_label":  "bmi-4"}
+      ],
+      "Action": "Weight"
+    },
+    {
+      "Name": "bmi-4",
+      "Message": "",
+      "Options": [
+        {"option_text": "", "next_vertex_label":  "show_bmi-5"}
+      ],
+      "Action": "BMI"
+    },
+    {
+      "Name": "show_bmi-5",
+      "Message": "",
+      "Options": [],
+      "Action": "ShowBMIStatus"
+    }
+  ]
+}

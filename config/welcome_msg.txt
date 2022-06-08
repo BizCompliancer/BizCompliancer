@@ -1,0 +1,6 @@
+Hey, I am Biz_Compiancer Bot, your assistant chatbot, and you're welcome to the CyInve group.
+Before we start let me provide you some information:
+1. To start your interaction just type and send 'hi', 'start' or 'hello' and I will respond to your message.
+2. Although if you read carefully and respond you may not need any assistance but if you feel you are not clear what to do just type and send something like "I don't understand", and I will ask admins present in this group about it.
+3. If you want to ask admins something directly, you can mention(using @) them in the beginning of the message and ask your query, I will not respond to that.
+4. Any other response other than what is asked will be counted unexpected and I will ask about it to admins, so type something else only when you want to ask something
