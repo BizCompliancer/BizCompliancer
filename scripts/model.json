@@ -1,0 +1,42 @@
+{
+  "Nodes": [
+    {
+      "Name": "/start",
+      "Message": "Let me know when you are ready to register..",
+      "Options": [
+        {"option_text": "Let's start", "next_vertex_label":  "/start-1"}
+      ],
+      "Action": ""
+    },
+    {
+      "Name": "/start-1",
+      "Message": "Enter your name for DIN",
+      "Options": [
+        {"option_text": "", "next_vertex_label":  "Adhaar-2"},
+      ],
+      "Action": ""
+    },
+    {
+      "Name": "Adhaar-2",
+      "Message": "Enter your Adhaar number? Type like '123412341234'",
+      "Options": [
+        {"option_text": "", "next_vertex_label":  "PAN-3"}
+      ],
+      "Action": "Adhaar"
+    },
+    {
+      "Name": "PAN-3",
+      "Message": "Enter your PAN number? Type like 'AATTPY1234A'",
+      "Options": [
+        {"option_text": "", "next_vertex_label":  "show_details"}
+      ],
+      "Action": "PAN"
+    },
+    {
+      "Name": "show_details",
+      "Message": "",
+      "Options": [],
+      "Action": "ShowStatus"
+    }
+  ]
+}
