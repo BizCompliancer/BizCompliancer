@@ -8,26 +8,27 @@ from PythonCore.ChatBot.response_options import ResponseOptions
 VertexType = TypeVar('VertexType', bound='Vertex')
 ResponseOptionsType = TypeVar("ResponseOptionsType", bound=ResponseOptions)
 
-class Adhaar(ChatBotVertex):
+class PAN(ChatBotVertex):
     def __init__(self, label: str, bot_message: str, response_options: List[ResponseOptionsType], orchestrator_obj):
         super().__init__(label, bot_message, response_options, orchestrator_obj)
 
 
     def action(self, next_vertex_label: Optional[str] = None, msg: Optional[str] = None, sender_name: Optional[str] = None, msg_id: Optional[int] = None) -> Optional[str]:
         split_msg_list: List[str] = msg.split(" ")
-        adhaar: str = split_msg_list[1]
+        pan: str = split_msg_list[1]
 
-        return adhaar
+        return pan
+
 
     def send_bot_response(self, bot_response: str) -> None:
         # Getting instance of telegram_chat_bot_utils
         telegram_chat_bot_utils = self.orchestrator_object.telegram_chat_bot_utils
         msg_str: str = ""
 
-        if len(bot_response) == 12:
-            msg_str += "Invalid  adhaar number"
+        if len(bot_response) != 10:
+            msg_str += "Invalid  PAN number"
         else:
-            msg_str += "Adhaar number stored successfully."
+            msg_str += "PAN number stored successfully."
 
 
 
@@ -41,7 +42,7 @@ class Adhaar(ChatBotVertex):
         self.send_bot_message()
 
         # Getting user response
-        contained_strings_dict = {"Adhaar": "PAN-3"}
+        contained_strings_dict = {"PAN": "show_details"}
         next_vertex_label, msg, sender_name, msg_id = self.get_user_response(contained_strings_dict)
 
         # processing message and fetching useful data from it
