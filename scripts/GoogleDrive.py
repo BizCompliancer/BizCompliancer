@@ -4,12 +4,12 @@ from pydrive.drive import GoogleDrive
 
 
 class GoogleDrive:
-    folder = '1S_b2h-CV8eiyZAUgDTwmNar_BptkcOkx'  # Google drive folder paath
 
-    directory = "D:/New folder/BizCompliancer/data"  # Directory path of which we want to upload the file
-
-    gauth = GoogleAuth()
-    drive = GoogleDrive(gauth)
+    def __init__(self):
+        self.folder = '1S_b2h-CV8eiyZAUgDTwmNar_BptkcOkx'  # Google drive folder path
+        self.directory = "D:/New folder/BizCompliancer/data"  # Directory path of which we want to upload the file
+        self.gauth = GoogleAuth()
+        self.drive = GoogleDrive(self.gauth)
 
     def upload_file(self):
         for f in os.listdir(self.directory):  # os.listdir() is used to iterate the list of file in the directory of which path is provided in directory variable
