@@ -28,16 +28,19 @@ class Dropbox:
     def download_files(self):
         try:
             local_file_path = r"C:\Users\win10\Downloads"
-            with open(local_file_path, "wb") as file:
-                metadata, result = self.dbx_files_download(path= "/home/Apps/BizC/home/Apps/BizC/test.cpp")
+            with open('test.cpp', "wb") as file:
+                metadata, result = self.dbx.files_download(path="/home/Apps/BizC/test.cpp")
                 file.write(result.content)
+                print(result.content)
+
         except Exception as e:
             print("File downloading failed" + str(e))
 
 
 
 
-at = 'sl.BJ1g8CPCRgCgddsk-W3FSBcrI8KqC4Dt4bbjKJi4q661JH-VzYNKFJkHtT6LazZAQQZE2gC19_VsuAtjEhyZtkCgPi7CK3Tu729Q8_0zS6vW24c88WSeEIo_ccu7ErUofLEoECH5RIM'
+
+at = 'sl.BJ9zItBKJ0xF6BAudSyuA0B4xyKttE7kqj9dDyIyBJ4tiASwXcJpNf6U2ffLy8Stob6qnkd_htv7mgES8EyaikEdJzFmhbDsmUuv_IzuLDJ6B6e9Akjde6yDghXTPMsoWAsSVsaAMIU'
 user = Dropbox(at)
 user.check_auth()
 #user.upload_files()
